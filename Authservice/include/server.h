@@ -18,9 +18,11 @@ private slots:
     void onReadyRead();
     void onDisconnected();
 
+
 private:
     void processRequest(QTcpSocket* socket, const QByteArray& data);
     QByteArray generateJwtToken(const QString& userId);
     bool validateJwtToken(const QByteArray& token);
+    QByteArray base64UrlEncode(const QByteArray& data);
 };
 
