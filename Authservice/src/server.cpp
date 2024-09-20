@@ -137,7 +137,6 @@ void Server::processRequest(QTcpSocket* socket, const QByteArray& data) {
     socket->flush();
 }
 
-
 QByteArray Server::generateJwtToken(const QString& userId) {
     QJsonObject header;
     header["alg"] = "HS256";
